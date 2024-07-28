@@ -16,4 +16,4 @@ import numpy as np
 st.title("Title you want to show")
 ```
 
-![img]()
+![img](./img/streamlit.gif "Author: Arpit Dubey")
