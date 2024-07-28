@@ -1,0 +1,5 @@
+My name is Arpit Dubey
+Arpit is a good person
+He knowns Data Science and Artificial Intelligence
+He can use Generative Artificial Intelligence tool well.
+He knows GenAI, GANs, LLMs, Vector databases, Graph databases, LangChain etc.,
