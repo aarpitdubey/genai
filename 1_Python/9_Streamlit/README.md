@@ -73,3 +73,17 @@ st.write(df)
 ```
 
 ![img](./img/st_dataframe.gif "Author: Arpit Dubey")
+
+Let's Create a Line Chart :
+
+```python
+# Let's create a line Chart
+st.write('This is the line chart :')
+line_chart = pd.DataFrame(
+    np.random.randn(12, 3), columns=['Microsoft', 'Intel', 'Google']
+)
+
+st.line_chart(line_chart)
+```
+
+![img](./img/line_chart.gif "Author: Arpit Dubey")
