@@ -25,7 +25,7 @@ An ANN is composed of layers of nodes, or neurons:
 
 **Common Activation Functions:**
 
-* **ReLU (Rectified Linear Unit):** ( $f(x) = \max(0, x)$)
+* **ReLU (Rectified Linear Unit):** $(f(x) = \max(0, x))$
 * **Sigmoid:** ( $f(x)$ = $\frac{1}{1 + e^{-x}}$ )
 * **Tanh:** ( $f(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$ )
 * **Softmax:** ( $f(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}} $) (typically used in the output layer of classification tasks)
