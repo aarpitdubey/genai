@@ -62,7 +62,7 @@ An ANN is composed of layers of nodes, or neurons:
 2. **Weight Update:** Adjust the weights in the opposite direction of the gradient to reduce the loss.
 
 * For a weight $(W_{new}): [ W_{new} = W_{old} - \eta \frac{\partial L}{\partial W_{old}} ]$
-  * Where ( $\eta$ ) is the learning rate, and $( \frac{\partial L}{\partial W_{old}} )$ is the gradient of the loss $( L ) $ with respect to the weight $( W_{old} )$.
+  * Where ( $\eta$ ) is the learning rate, and $( \frac{\partial L}{\partial W_{old}} )$ is the gradient of the loss $(L)$ with respect to the weight $( W_{old} )$.
 
 ### Necessity of Forward and Backward Propagation
 
