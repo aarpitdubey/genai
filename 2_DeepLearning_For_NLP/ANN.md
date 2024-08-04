@@ -68,3 +68,12 @@ An ANN is composed of layers of nodes, or neurons:
 
 * **Forward Propagation:** Enables the network to compute outputs based on current weights and biases, providing a prediction.
 * **Backward Propagation:** Adjusts weights to minimize prediction error, helping the network learn from data.
+
+![img](./img/ann2.png "Author: Arpit Dubey")
+
+### Limitations of ANNs
+
+- If text sentences are passed as input ANNs are **not** **able to maintain the entire Sequence**
+- It is **giving all the words** to the neural network **all at once** for a specific sentence
+
+**Solution:** Researchers find out new neural network where information should be given in a sequiential manner based upon timestamp and one input at a time these are RNNs (Recurrent Neural Network)
