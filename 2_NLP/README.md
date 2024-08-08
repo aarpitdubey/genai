@@ -123,4 +123,11 @@ where as, in Binary BOW the frequecy of words doesn't impact the vectors
 | Sentence 2: "She is a good girl"       | 1    | 0   | 1    | 1      |
 | Sentence 3: "Boy and girl are good"    | 1    | 1   | 1    | 1      |
 
-![img]()
+![img](./img/bow.png "Author: Arpit Dubey")
+
+| Advantages           | Disadvantages                           |
+| -------------------- | --------------------------------------- |
+| Simple and Intuitive | Sparse Matrix or array ---> overfitting |
+| Fixed Sized          | Ordering of the words is changing       |
+|                      | Out of Vocabulary (OOV)                 |
+|                      | Semantic meaning is still not caputured |
