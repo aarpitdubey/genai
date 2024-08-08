@@ -40,4 +40,9 @@ Corpus = "My name is ARPIT and I have interest in building projects related to M
 
 2) **word_tokenizer()**
 
-![img]()
+![img](./img/word_token.png "Author: Arpit Dubey")
+
+## Stemming
+
+- Stemming is the process of reducing a word to it;s word stem that affixes to suffixes and prefixes or to the roots of words known as a lemma.
+- Stemming is important in natural language understanding (NLU) and Natural Language processing (NLP).
