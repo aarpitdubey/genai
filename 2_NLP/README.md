@@ -46,3 +46,5 @@ Corpus = "My name is ARPIT and I have interest in building projects related to M
 
 - Stemming is the process of reducing a word to it;s word stem that affixes to suffixes and prefixes or to the roots of words known as a lemma.
 - Stemming is important in natural language understanding (NLU) and Natural Language processing (NLP).
+
+words= ["eating", "eats", "eaten", "writing", "writes", "programming", "programs", "history", "finally", "finalized"]
