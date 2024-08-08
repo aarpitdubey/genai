@@ -131,3 +131,94 @@ where as, in Binary BOW the frequecy of words doesn't impact the vectors
 | Fixed Sized          | Ordering of the words is changing       |
 |                      | Out of Vocabulary (OOV)                 |
 |                      | Semantic meaning is still not caputured |
+
+## Term Frequency - Inverse Document Frequency (TF - IDF)
+
+**Term Frequency (TF):** Term Frequency (TF) is a measure of how frequently a word appears in a document. It is calculated as the number of times a word appears in a document divided by the total number of words in that document.
+
+The formula for Term Frequency is:
+
+$$
+TF(t, d) = \frac{\text{Number of times term } t \text{ appears in document } d}{\text{Total number of terms in document } d}
+$$
+
+**Example:**
+
+In the sentence "He is a good boy", the term "good" appears 1 time, and the total number of terms in the document is 5. Therefore, the Term Frequency of "good" is:
+
+$$
+TF(\text{good}, \text{"He is a good boy"}) = \frac{1}{5} = 0.2
+$$
+
+**After Stopwords removal:**
+
+    $TF(\text{good}, \text{"good boy"}) = \frac{1}{2} = 0.5$
+
+**Inverse Document Frequency (IDF):** Inverse Document Frequency (IDF) is a measure of how important a word is in a collection of documents (corpus). It is calculated as the logarithm of the total number of documents in the corpus divided by the number of documents containing the term.
+
+The formula for Inverse Document Frequency is:
+
+$$
+IDF(t, D) = log\left(\frac{\text{Total number of documents in the corpus}}{\text{Number of documents containing the term } t}\right)
+$$
+
+**Example:**
+
+Let's assume the corpus consists of the following 3 sentences:
+
+1. "He is a good boy"
+2. "She is a good girl"
+3. "Boy and girl are good"
+
+The term "good" appears in 3 out of the 3 documents, so the IDF of "good" is:
+
+$$
+IDF(\text{good}, D) = log\left(\frac{3}{3}\right) = 0
+$$
+
+The term "boy" appears in 2 out of the 3 documents, so the IDF of "boy" is:
+
+$$
+IDF(\text{boy}, D) = log\left(\frac{3}{2}\right) = 0.1760
+$$
+
+**TF-IDF:**
+
+TF-IDF (Term Frequency-Inverse Document Frequency) is a numerical statistic that is intended to reflect the importance of a word to a document in a collection or corpus. It is calculated by multiplying the Term Frequency (TF) by the Inverse Document Frequency (IDF).
+
+The formula for TF-IDF is:
+
+$$
+TF-IDF(t, d, D) = TF(t, d) \times IDF(t, D)
+$$
+
+**Example:**
+
+Let's calculate the TF-IDF for the term "good" in the sentence "He is a good boy":
+
+
+$$
+TF(\text{good}, \text{"He is a good boy"}) = \frac{1}{5} = 0.2
+$$
+
+After Stopwords removal:
+
+    $	TF(\text{good}, \text{"good boy"}) = \frac{1}{2} = 0.5$
+
+$$
+IDF(\text{good}, D) = log\left(\frac{3}{3}\right) = 0
+$$
+
+$$
+TF-IDF(\text{good}, \text{"He is a good boy"}, D) = 0.2 \times 0 = 0
+$$
+
+So, the TF-IDF of the term "good" in the sentence "He is a good boy" is 0.
+
+![img](./img/tfidf.png "Author: Arpit Dubey")
+
+| Advantages                          | Disadvantages         |
+| ----------------------------------- | --------------------- |
+| Intuitive                           | Sparcity still exists |
+| Fixed Size --> Vocab Size           | OOV                   |
+| Word Importance is getting captured |                       |
