@@ -233,3 +233,59 @@ let's take an example: We have three words list : ['Angry', 'Happy', 'Excited'] 
 ### Word2Vec
 
 Word2Vec is a technique for natural language processing (NLP) published in 2013. The Word2Vec algorithm uses a neural network model to learn word associations from large corpus of text. Once trained, such a model can detect synonymous words or suggest additional words for a partial sentence. As the name implies, word2vec represents each distinct word with a particular list of numbers called a vector.
+
+Cosine similarity is a measure used to determine how similar two vectors are in terms of their orientation. It is calculated as the cosine of the angle \(\theta\) between the two vectors. The formula for cosine similarity is:
+
+$\text{Cosine Similarity} = \cos(\theta) = \frac{\mathbf{A} \cdot \mathbf{B}}{\|\mathbf{A}\| \|\mathbf{B}\|}$
+
+where:
+
+- \($\mathbf{A} \cdot \mathbf{B}$\) is the dot product of vectors \($\mathbf{A}$\) and \($\mathbf{B}$).
+- \($\|\mathbf{A}\|$\) and \($\|\mathbf{B}\|$\) are the magnitudes (or lengths) of vectors \($\mathbf{A}$) and \($\mathbf{B}$\), respectively.
+
+The cosine similarity value ranges from -1 to 1:
+
+- \(1\) indicates that the vectors are identical (the angle \($\theta = 0^\circ$\)).
+- \(0\) indicates that the vectors are orthogonal (the angle \($\theta = 90^\circ)$).
+- \(-1\) indicates that the vectors are diametrically opposed.
+
+Let's consider movies "Titanic," "Iron Man 3," and "Avengers." We'll categorize these movies with simplified genre vectors. For this example, let's define a genre space with the following categories: Romance, Action, Drama, and Sci-Fi.
+
+Vectors:
+
+- **Titanic**: [Romance = 1, Action = 0, Drama = 1, Sci-Fi = 0]
+- **Iron Man 3**: [Romance = 0, Action = 1, Drama = 0, Sci-Fi = 1]
+- **Avengers**: [Romance = 0, Action = 1, Drama = 0, Sci-Fi = 1]
+
+![img](./img/cossim.png)
+
+#### Cosine Similarity:
+
+1. **Titanic and Iron Man 3**:
+
+   - Dot Product: \( 1 $\times$ 0 + 0 $\times 1$ + $1 \times 0$ + $0 \times 1 = 0$ \)
+   - Magnitude of Titanic: \( $\sqrt{1^2 + 0^2 + 1^2 + 0^2} = \sqrt{2}$ \)
+   - Magnitude of Iron Man 3: \( $\sqrt{0^2 + 1^2 + 0^2 + 1^2} = \sqrt{2}$ \)
+   - Cosine Similarity: \( $\frac{0}{\sqrt{2} \times \sqrt{2}} = 0$ \)
+   - \($\theta = 90^\circ$\)
+   - Distance = 1 -  $\cos \theta$ = 1 - $\cos 90^\circ$ = 1 - 0 = 1 (both are far away)
+2. **Iron Man 3 and Avengers**:
+
+   - Dot Product: \( $0 \times 0 + 1 \times 1 + 0 \times 0 + 1 \times 1 = 2$ \)
+   - Magnitude of Iron Man 3: \( $\sqrt{2}$ \)
+   - Magnitude of Avengers: \( $\sqrt{2}$ \)
+   - Cosine Similarity: \( $\frac{2}{\sqrt{2} \times \sqrt{2}} = 1$ \)
+   - \($\theta = 0^\circ$\)
+
+   * Distance = 1 -  $\cos \theta$ = 1 - $\cos 0^\circ$ = 1 - 1= 0 (both are closer to each other)
+
+- **Titanic** and **Iron Man 3** have a cosine similarity of 0, indicating orthogonality, which means they are from different genres.
+
+* **Iron Man 3** and **Avengers** have a cosine similarity of 1, indicating they are from similar genres.
+
+##### Advantages of Word2Vec
+
+- Able to get a Dense Matrix instead of Sparse Matrix.
+- Now, Semantic Information is getting captured
+- Now, we have fixed set of dimensions instead of depending upon the vocabulary size.
+- Out Of Vocabulary (OOV) problem is solved.
