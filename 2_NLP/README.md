@@ -159,7 +159,7 @@ $$
 The formula for Inverse Document Frequency is:
 
 $$
-IDF(t, D) = log\left(\frac{\text{Total number of documents in the corpus}}{\text{Number of documents containing the term } t}\right)
+IDF(t, D) = log{_e}\left(\frac{\text{Total number of documents in the corpus}}{\text{Number of documents containing the term } t}\right)
 $$
 
 **Example:**
@@ -173,13 +173,13 @@ Let's assume the corpus consists of the following 3 sentences:
 The term "good" appears in 3 out of the 3 documents, so the IDF of "good" is:
 
 $$
-IDF(\text{good}, D) = log\left(\frac{3}{3}\right) = 0
+IDF(\text{good}, D) = log{_e}\left(\frac{3}{3}\right) = 0
 $$
 
 The term "boy" appears in 2 out of the 3 documents, so the IDF of "boy" is:
 
 $$
-IDF(\text{boy}, D) = log\left(\frac{3}{2}\right) = 0.1760
+IDF(\text{boy}, D) = log{_e}\left(\frac{3}{2}\right) = 0.1760
 $$
 
 **TF-IDF:**
@@ -195,7 +195,6 @@ $$
 **Example:**
 
 Let's calculate the TF-IDF for the term "good" in the sentence "He is a good boy":
-
 
 $$
 TF(\text{good}, \text{"He is a good boy"}) = \frac{1}{5} = 0.2
@@ -222,3 +221,15 @@ So, the TF-IDF of the term "good" in the sentence "He is a good boy" is 0.
 | Intuitive                           | Sparcity still exists |
 | Fixed Size --> Vocab Size           | OOV                   |
 | Word Importance is getting captured |                       |
+
+#### Word Embeddings
+
+- In natural language processing (NLP), word embedding in a term used for the representation of words for text analysis, typically in the form of a real-valued vector that encodes the meaning of the word such that the word such that the words that are closer in the vector space are expected to be similar in meaning.
+
+let's take an example: We have three words list : ['Angry', 'Happy', 'Excited'] now if we convert them into vectors and then try to plot them in 2-D axis then the similar words like "Happy" and "Excited" are close to each other but the word "Angry" which have opposite meaning to "Happy" are plotted Far away to these words.
+
+![img](./img/wordembed.png "Author: Arpit Dubey")
+
+### Word2Vec
+
+Word2Vec is a technique for natural language processing (NLP) published in 2013. The Word2Vec algorithm uses a neural network model to learn word associations from large corpus of text. Once trained, such a model can detect synonymous words or suggest additional words for a partial sentence. As the name implies, word2vec represents each distinct word with a particular list of numbers called a vector.

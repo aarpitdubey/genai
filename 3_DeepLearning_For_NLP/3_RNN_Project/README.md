@@ -8,4 +8,4 @@
 * The embedding layer learns a dense, distributed representation of the input features, where semantically similar features are mapped to nearby points in the vector space.
 * The learned embeddings capture the underlying relationships and patterns in the input data, which can be leveraged by the subsequent layers of the neural network.
 
-![img]()
+![img](./img/we_rnn.png "Author: Arpit Dubey")
